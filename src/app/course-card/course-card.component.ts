@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'course-card',
@@ -8,8 +9,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CourseCardComponent implements OnInit{
   
-  @Input()
-  title:string;
+  @Input({
+    required:true
+  })
+  course:Course;
   
   ngOnInit(): void {
     //
