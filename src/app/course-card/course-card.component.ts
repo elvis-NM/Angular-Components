@@ -14,8 +14,8 @@ export class CourseCardComponent implements OnInit{
   })
   course:Course;
  
-  @Output()
-  courseSelected = new EventEmitter<Course>();
+  @Output('courseSelected')
+  courseEmitter = new EventEmitter<Course>();
   
   ngOnInit(): void {
     //
@@ -23,7 +23,7 @@ export class CourseCardComponent implements OnInit{
 
  onCourseViewed(){
  console.log("Card component - click event bubbled");
- this.courseSelected.emit(this.course);
+ this.courseEmitter.emit(this.course);
  }
 
 }
