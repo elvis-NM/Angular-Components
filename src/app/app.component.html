@@ -8,7 +8,7 @@
 
 <div class="courses">
 
-<course-card [course]="coreCourse"></course-card>
+<course-card (click)="onCardClicked()" [course]="coreCourse"></course-card>
 
 <course-card [course]="rxjsCourse"></course-card>
 

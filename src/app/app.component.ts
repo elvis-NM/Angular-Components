@@ -15,4 +15,8 @@ export class AppComponent {
 
     ngrxCourse = COURSES[2];
 
+    onCardClicked(){
+        console.log("App component - click event bubbled");
+    }
+
 }

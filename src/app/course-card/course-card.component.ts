@@ -18,5 +18,8 @@ export class CourseCardComponent implements OnInit{
     //
   }
 
+ onCourseViewed(){
+ console.log("Card component - click event bubbled");
+ }
 
 }
